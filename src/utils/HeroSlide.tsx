@@ -24,7 +24,7 @@ export default function HeroSlide() {
         modules={[Pagination, Autoplay]}
         className="mySwiper bg-pink"
       >
-        <SwiperSlide className="px-24">
+        <SwiperSlide className="px-4 md:px-24">
           <div className="flex flex-col-reverse md:flex-row justify-between items-center py-8">
             <div className="w-full md:w-[40%]">
               <h2 className="text-2xl md:text-5xl text-brown tracking-wide py-8 font-extrabold font-kanit text-left">
@@ -36,12 +36,12 @@ export default function HeroSlide() {
                 do.
               </p>
             </div>
-            <div className="overflow-hidden w-[80%] md:w-[40%] flex items-center justify-center">
+            <div className="overflow-hidden w-full  md:w-[40%] flex items-center justify-center">
               <img src={Img1} className="object-cover w-full" alt="item1" />
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="px-24">
+        <SwiperSlide className="px-4 md:px-24">
           <div className="flex flex-col-reverse md:flex-row justify-between items-center py-8">
             <div className="w-full md:w-[40%]">
               <h2 className="text-2xl md:text-5xl text-brown tracking-wide py-8 font-extrabold font-kanit text-left">
@@ -52,12 +52,12 @@ export default function HeroSlide() {
                 healthy, gorgeous hair today.
               </p>
             </div>
-            <div className="overflow-hidden w-[80%] md:w-[40%] flex items-center justify-center">
+            <div className="overflow-hidden w-full  md:w-[40%] flex items-center justify-center">
               <img src={Img2} className="object-cover w-full" alt="item2" />
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="px-24">
+        <SwiperSlide className="px-4 md:px-24">
           <div className="flex flex-col-reverse md:flex-row justify-between items-center py-8">
             <div className="w-full md:w-[40%]">
               <h2 className="text-2xl md:text-5xl text-brown tracking-wide py-8 font-extrabold font-kanit text-left">
@@ -68,7 +68,7 @@ export default function HeroSlide() {
                 accessories. Because your hair deserves the best.
               </p>
             </div>
-            <div className="overflow-hidden w-[80%] md:w-[40%] flex items-center justify-center">
+            <div className="overflow-hidden w-full  md:w-[40%] flex items-center justify-center">
               <img src={Img2} className="object-cover w-full" alt="item2" />
             </div>
           </div>
