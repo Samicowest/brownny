@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { IoPersonOutline } from "react-icons/io5";
 import { AiOutlineShopping } from "react-icons/ai";
 import { FaBars, FaTimes } from "react-icons/fa";
