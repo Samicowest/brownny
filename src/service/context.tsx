@@ -1,0 +1,41 @@
+import { createContext, useContext, useState, ReactNode } from "react";
+
+// Define the structure of your context
+interface DataContextType {
+  overlayVisible: boolean;
+  toggleOverlay: () => void;
+}
+
+// Create the context with a default placeholder value
+const DataContext = createContext<DataContextType | undefined>(undefined);
+
+// Provider component props
+interface DataProviderProps {
+  children: ReactNode;
+}
+
+// DataProvider component
+export const DataProvider = ({ children }: DataProviderProps): JSX.Element => {
+  const [overlayVisible, setOverlayVisible] = useState(true);
+
+  const toggleOverlay = () => {
+    console.log("items should be visible");
+    console.log(overlayVisible);
+    setOverlayVisible(!overlayVisible);
+  };
+
+  return (
+    <DataContext.Provider value={{ overlayVisible, toggleOverlay }}>
+      {children}
+    </DataContext.Provider>
+  );
+};
+
+// Custom hook to access the context
+export const useDataContext = (): DataContextType => {
+  const context = useContext(DataContext);
+  if (!context) {
+    throw new Error("useDataContext must be used within a DataProvider");
+  }
+  return context;
+};
