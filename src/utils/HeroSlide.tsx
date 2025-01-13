@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,9 +8,6 @@ import Img1 from "@/assets/heroimg1.png";
 import Img2 from "@/assets/heroimg2.png";
 
 export default function HeroSlide() {
-  const prevRef = useRef<HTMLDivElement>(null);
-  const nextRef = useRef<HTMLDivElement>(null);
-
   return (
     <>
       <Swiper
@@ -20,17 +16,6 @@ export default function HeroSlide() {
         loop={true}
         pagination={{
           clickable: true,
-        }}
-        navigation={{
-          prevEl: prevRef.current, // Custom previous button
-          nextEl: nextRef.current, // Custom next button
-        }}
-        onBeforeInit={(swiper) => {
-          // Ensure navigation buttons are correctly assigned
-          if (prevRef.current && nextRef.current) {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-          }
         }}
         autoplay={{
           delay: 4500,
